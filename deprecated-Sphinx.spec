@@ -6,7 +6,7 @@
 #
 Name     : deprecated-Sphinx
 Version  : 1.8.5
-Release  : 106
+Release  : 107
 URL      : https://files.pythonhosted.org/packages/2a/86/8e1e8400bb6eca5ed960917952600fce90599e1cb0d20ddedd81ba163370/Sphinx-1.8.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2a/86/8e1e8400bb6eca5ed960917952600fce90599e1cb0d20ddedd81ba163370/Sphinx-1.8.5.tar.gz
 Source99 : https://files.pythonhosted.org/packages/2a/86/8e1e8400bb6eca5ed960917952600fce90599e1cb0d20ddedd81ba163370/Sphinx-1.8.5.tar.gz.asc
@@ -113,7 +113,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554300255
+export SOURCE_DATE_EPOCH=1554300416
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -129,10 +129,10 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/sphinx-apidoc
-/usr/bin/sphinx-autogen
-/usr/bin/sphinx-build
-/usr/bin/sphinx-quickstart
+%exclude /usr/bin/sphinx-apidoc
+%exclude /usr/bin/sphinx-autogen
+%exclude /usr/bin/sphinx-build
+%exclude /usr/bin/sphinx-quickstart
 
 %files legacypython
 %defattr(-,root,root,-)

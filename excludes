@@ -1,2 +1,6 @@
 # This file contains the output files that need %exclude. Full path
 # names, one per line.
+/usr/bin/sphinx-apidoc
+/usr/bin/sphinx-autogen
+/usr/bin/sphinx-build
+/usr/bin/sphinx-quickstart
